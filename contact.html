@@ -30,18 +30,23 @@
 
     <main>
       <h2>Kontakta oss</h2>
-      <section class="contact-section">
+      <section>
         <form action="" method="post">
-          <fieldset>
+          <fieldset class="contact-section">
             <legend>Kontaktformulär</legend>
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Namn..."
-              required
-            />
+            
+            <div class="form-row">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Namn..."
+                required
+              />
+            </div>
+
+            <div class="form-row">
             <label for="email">Email:</label>
             <input
               type="email"
@@ -50,17 +55,31 @@
               placeholder="Email..."
               required
             />
+            </div>
+
+            <div class="form-row">
             <label for="payment">Finansieringsform:</label>
             <select name="payment" id="payment">
               <option value="purchase">Köpa</option>
               <option value="lease">Leasa</option>
               <option value="rent">Hyra</option>
             </select>
+            </div>
+
+            <div class="form-row">
             <label for="message">Meddelande:</label>
-            <textarea name="message" id="message" rows="1" cols="50"></textarea>
+            <textarea name="message" id="message" rows="5" cols="50"></textarea>
+            </div>
+
             <button>Skicka</button>
           </fieldset>
         </form>
+      </section>
+
+      <section class="personal-records">
+        <h3>Personuppgifter</h3>
+        <p>Personuppgifter samlas in för att kunna svara på meddelandet.</p>
+        <p><a href="/privacy.html">Länk till vår integritetspolicy.</a></p>
       </section>
     </main>
 

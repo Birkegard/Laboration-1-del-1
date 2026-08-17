@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Times New Roman", Times, serif;
   scroll-behavior: smooth;
@@ -24,6 +28,11 @@ header {
   padding: 5px;
 }
 
+footer{
+  margin: 0;
+  margin-top: 4rem;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -37,7 +46,7 @@ nav ul {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 4px;  
+  border-radius: 4px;
 }
 
 .logo-img {
@@ -72,11 +81,11 @@ div {
   color: white;
 }
 
-.cars{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .logo-div {
@@ -87,22 +96,22 @@ div {
   text-align: center;
 }
 
-.main-div p{
-    margin-bottom: 1.5rem;
+.main-div p {
+  margin-bottom: 1.5rem;
 }
 
-.about-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-left: 25%;
-    padding-right: 25%;
+.about-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
-.about-div p{
-    margin-bottom: 1.5rem;
+.about-div p {
+  margin-bottom: 1.5rem;
 }
 
 div p {
@@ -113,40 +122,102 @@ div a {
   margin: 0;
 }
 
-.card{
-    background-color: black;
-    border-radius: 5px;
-    box-shadow: 0 2px 8 px silver;
-    padding: 1rem;
-    width: 280px;
-    text-align: center;
+.card {
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0px 12px darkred;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
 }
 
-.card .price{
-    font-weight: bold;
-    color: darkred;
-
+.card .price {
+  font-weight: bold;
+  color: darkred;
 }
 
-.card .description{
-    font-style: italic;
+.card .description {
+  font-style: italic;
 }
 
-.card button{
-    background-color: black;
-    color: gold;
-    border: 1px solid gold;
-    padding: 0.5rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 0.5rem;
+.card button {
+  background-color: black;
+  color: gold;
+  border: 1px solid gold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
-.card button:hover{
-    background-color: gold;
-    color: black;
+.card button:hover {
+  background-color: gold;
+  color: black;
 }
 
-.contact-section{
-    color: white;
+.contact-section {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+
+.form-row{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-row label{
+  width: 130px;
+  text-align: right;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: none;
+  max-width: 200px;
+}
+
+legend{
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.personal-records{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.personal-records h3,
+.personal-records p{
+  margin: 0;
+}
+
+.personal-records h3{
+  text-decoration: underline;
+}
+
+.policy {
+  padding-left: 25%;
+  padding-right: 25%;
+  color: white;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.policy .contact{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
