@@ -29,12 +29,17 @@
     </header>
 
     <main>
-      <h2>Kontakta oss</h2>
+      <section class="personal-records">
+        <h2>Kontakta oss</h2>
+        <h3>Personuppgifter</h3>
+        <p>Personuppgifter samlas in för att kunna svara på meddelandet.</p>
+        <p><a href="/privacy.html">Länk till vår integritetspolicy.</a></p>
+      </section>
       <section>
         <form action="" method="post">
           <fieldset class="contact-section">
             <legend>Kontaktformulär</legend>
-            
+
             <div class="form-row">
               <label for="name">Name:</label>
               <input
@@ -43,43 +48,44 @@
                 name="name"
                 placeholder="Namn..."
                 required
+                autocomplete="name"
               />
             </div>
 
             <div class="form-row">
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email..."
-              required
-            />
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email..."
+                required
+                autocomplete="email"
+              />
             </div>
 
             <div class="form-row">
-            <label for="payment">Finansieringsform:</label>
-            <select name="payment" id="payment">
-              <option value="purchase">Köpa</option>
-              <option value="lease">Leasa</option>
-              <option value="rent">Hyra</option>
-            </select>
+              <label for="payment">Finansieringsform:</label>
+              <select name="payment" id="payment">
+                <option value="purchase">Köpa</option>
+                <option value="lease">Leasa</option>
+                <option value="rent">Hyra</option>
+              </select>
             </div>
 
             <div class="form-row">
-            <label for="message">Meddelande:</label>
-            <textarea name="message" id="message" rows="5" cols="50"></textarea>
+              <label for="message">Meddelande:</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                cols="50"
+              ></textarea>
             </div>
 
-            <button>Skicka</button>
+            <button type="submit">Skicka</button>
           </fieldset>
         </form>
-      </section>
-
-      <section class="personal-records">
-        <h3>Personuppgifter</h3>
-        <p>Personuppgifter samlas in för att kunna svara på meddelandet.</p>
-        <p><a href="/privacy.html">Länk till vår integritetspolicy.</a></p>
       </section>
     </main>
 
