@@ -7,19 +7,12 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-}
-
-body {
   background-color: black;
-  margin: 0;
-  padding: 0;
+  color: white;
 }
 
 header {
-  margin: 0;
   margin-top: 0px;
-  top: 0;
-  background-color: black;
   position: sticky;
   text-align: center;
   width: 100%;
@@ -29,14 +22,13 @@ header {
 }
 
 footer{
-  margin: 0;
   margin-top: 4rem;
+  line-height: 0.5;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
   padding: 0;
   gap: 1rem;
   justify-content: center;
@@ -73,34 +65,13 @@ a:hover {
 
 h2 {
   font-weight: bold;
-  color: white;
   text-align: center;
 }
 
-div {
-  color: white;
-}
-
-.cars {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.logo-div {
-  text-align: center;
-}
-
-.main-div {
-  text-align: center;
-}
-
-.main-div p {
-  margin-bottom: 1.5rem;
-}
-
-.about-div {
+.logo-div,
+.main-div,
+.about-div,
+.error-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,16 +81,17 @@ div {
   padding-right: 25%;
 }
 
-.about-div p {
-  margin-bottom: 1.5rem;
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-div p {
-  margin: 0;
-}
-
-div a {
-  margin: 0;
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  line-height: 0.5;
 }
 
 .card {
@@ -128,6 +100,7 @@ div a {
   box-shadow: 0 0px 12px darkred;
   padding: 1rem;
   width: 280px;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -140,7 +113,7 @@ div a {
   font-style: italic;
 }
 
-.card button {
+button {
   background-color: black;
   color: gold;
   border: 1px solid gold;
@@ -150,14 +123,13 @@ div a {
   margin-top: 0.5rem;
 }
 
-.card button:hover {
+button:hover {
   background-color: gold;
   color: black;
   transition: 1s;
 }
 
 .contact-section {
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -165,23 +137,6 @@ div a {
   width: 40%;
   margin: 0 auto;
 }
-
-.contact-section button{
-  background-color: black;
-  color: gold;
-  border: 1px solid gold;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-.contact-section button:hover{
-  background-color: gold;
-  color: black;
-  transition: 1s;
-}
-
 
 .form-row{
   display: flex;
@@ -209,7 +164,6 @@ legend{
 }
 
 .personal-records{
-  color: white;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -222,11 +176,9 @@ legend{
   margin: 0;
 }
 
-
 .policy {
   padding-left: 25%;
   padding-right: 25%;
-  color: white;
   display: block;
   justify-content: center;
   text-align: center;
