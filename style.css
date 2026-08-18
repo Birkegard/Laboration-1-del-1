@@ -153,6 +153,7 @@ div a {
 .card button:hover {
   background-color: gold;
   color: black;
+  transition: 1s;
 }
 
 .contact-section {
@@ -161,6 +162,24 @@ div a {
   flex-direction: column;
   gap: 1.2rem;
   align-items: center;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.contact-section button{
+  background-color: black;
+  color: gold;
+  border: 1px solid gold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.contact-section button:hover{
+  background-color: gold;
+  color: black;
+  transition: 1s;
 }
 
 
@@ -203,9 +222,6 @@ legend{
   margin: 0;
 }
 
-.personal-records h3{
-  text-decoration: underline;
-}
 
 .policy {
   padding-left: 25%;
