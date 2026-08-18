@@ -12,7 +12,6 @@ html {
 }
 
 header {
-  margin-top: 0px;
   position: sticky;
   text-align: center;
   width: 100%;
@@ -179,10 +178,7 @@ legend{
 .policy {
   padding-left: 25%;
   padding-right: 25%;
-  display: block;
-  justify-content: center;
   text-align: center;
-  align-items: center;
 }
 
 .policy .contact{
