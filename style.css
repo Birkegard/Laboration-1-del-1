@@ -11,16 +11,24 @@ html {
   color: white;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   position: sticky;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
   border-bottom: 2px solid darkred;
   box-shadow: 0px 6px 12px darkred;
   padding: 5px;
+  top: 0;
+  background-color: black;
+  z-index: 100;
 }
 
-footer{
+footer {
   margin-top: 4rem;
   line-height: 0.5;
 }
@@ -46,12 +54,15 @@ nav ul {
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 video {
   width: 600px;
   height: 300px;
   object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 a {
@@ -76,8 +87,9 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 25%;
-  padding-right: 25%;
+  width: 50%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 p {
@@ -98,9 +110,10 @@ p {
   border-radius: 5px;
   box-shadow: 0 0px 12px darkred;
   padding: 1rem;
-  width: 280px;
+  width: 400px;
   max-width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .card .price {
@@ -110,6 +123,17 @@ p {
 
 .card .description {
   font-style: italic;
+}
+
+.card .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: darkred;
+  border: 1px solid white;
+  padding: 0.5rem 0.8em;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 button {
@@ -137,7 +161,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.form-row{
+.form-row {
   display: flex;
   align-items: center;
   gap: 0.3rem;
@@ -145,24 +169,26 @@ button:hover {
   max-width: 400px;
 }
 
-.form-row label{
+.form-row label {
   width: 130px;
   text-align: right;
+  max-width: 100%;
 }
 
 .form-row input,
 .form-row select,
 .form-row textarea {
   flex: none;
-  max-width: 200px;
+  width: 200px;
+  max-width: 100%;
 }
 
-legend{
+legend {
   text-align: center;
   padding: 0 0.5rem;
 }
 
-.personal-records{
+.personal-records {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -171,7 +197,7 @@ legend{
 }
 
 .personal-records h3,
-.personal-records p{
+.personal-records p {
   margin: 0;
 }
 
@@ -181,8 +207,67 @@ legend{
   text-align: center;
 }
 
-.policy .contact{
+.policy .contact {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+}
+
+.featured {
+  text-align: center;
+}
+
+.featured-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid gold;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 3px;
+}
+
+.selected-product {
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0px 12px gold;
+  padding: 1rem;
+  width: 33%;
+  max-width: 100%;
+  min-width: 220px;
+  text-align: center;
+  position: relative;
+}
+
+.selected-product .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: darkred;
+  border: 1px solid white;
+  padding: 0.5rem 0.8em;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.selected-product .car-img{
+  width: 220px;
+  height: 100px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .featured-products{
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px){
+  .featured-products{
+    width: 100%;
+  }
 }
