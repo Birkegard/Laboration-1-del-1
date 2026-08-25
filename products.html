@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="products.js" defer></script>
   </head>
   <body>
     <header>
@@ -25,6 +27,9 @@
           <li><a href="contact.html">Kontakt</a></li>
           <li><a href="privacy.html">Privacy</a></li>
         </ul>
+        <button class="cart-link" aria-label="Varukorg">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
       </nav>
     </header>
 
@@ -37,22 +42,34 @@
             <span class="discount">Rea</span>
             <img class="car-img" src="images/audi.webp" alt="Audi R8" />
             <p class="price">Pris: 1 460 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">Vorsprung durch Technik</p>
-            <button>Läs mer om Audi R8</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
           <article class="card">
             <h3>BMW M3</h3>
             <img class="car-img" src="images/bmw.webp" alt="BMW M3" />
             <p class="price">Pris: 942 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">One Origin. Two Originals</p>
-            <button>Läs mer om BMW M3</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
           <article class="card">
             <h3>Dodge Viper</h3>
             <img class="car-img" src="images/dodge.webp" alt="Dodge Viper" />
             <p class="price">Pris: 780 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">Tear Up the Streets… Not the Planet</p>
-            <button>Läs mer om Dodge Viper</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
           <article class="card">
             <h3>Chevrolet Camaro</h3>
@@ -62,15 +79,23 @@
               alt="Chevrolet Camaro"
             />
             <p class="price">Pris: 800 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">Find New Roads</p>
-            <button>Läs mer om Chevrolet Camaro</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
           <article class="card">
             <h3>Ferrari 458</h3>
             <img class="car-img" src="images/ferrari.webp" alt="Ferrari 458" />
             <p class="price">Pris: 2 300 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">We are the competition.</p>
-            <button>Läs mer om Ferrari 458</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
           <article class="card">
             <h3>Lamborghini Gallardo</h3>
@@ -81,10 +106,38 @@
               alt="Lamborghini Gallardo"
             />
             <p class="price">Pris: 2 600 000kr</p>
+            <label>
+              Antal:
+            <input type="number" value="1" min="1" class="quantity">
+            </label>
             <p class="description">For love of the car</p>
-            <button>Läs mer om Lamborghini Gallardo</button>
+            <button class="buyButton">Lägg i varukorg</button>
           </article>
         </div>
+
+        <!--Start shoppingcart-->
+        <div id="cart-window">
+            <div id="cart-box">
+              <div class="heading">
+                  <h1>Varukorg</h1>
+                <button class="close-button">Stäng varukorgen</button>
+              </div>
+              <div id="cart-items-container">
+                <ul>
+                </ul>
+              </div>
+
+              <div id="cart-checkout">
+                <div id="total-checkout">
+                    <p>Totalt:</p>
+                    <span class="price">0 kr</span>
+                </div>
+                <button id="checkout-button">Checkout</button>
+              </div>
+
+          </div>
+        </div>
+        <!--Slut shoppingcart-->
       </section>
     </main>
 
