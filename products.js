@@ -1,3 +1,75 @@
+const productList = document.getElementById("productList");
+
+const getData = async () => {
+  try {
+    const response = await fetch ("./products.json");
+    if (!response.ok){
+      console.error("Fel från servern: " + response.status)
+    }
+    const products = await response.json();
+    renderProducts(products);
+    
+  } catch (error) {
+    console.error("Fel: ", error)
+  }
+};
+
+const renderProducts = (products) => {
+  products.forEach((product) => {
+    console.log("Product: ", product);
+    const article = document.createElement("article")
+    article.classList.add("card");
+    const name = document.createElement("h3")
+    name.classList.add("h3")
+    const img = document.createElement("img")
+    img.classList.add("car-img");
+    const price = document.createElement("p")
+    price.classList.add("price");
+    const description = document.createElement("p")
+    description.classList.add("description");
+    const quantityInput = document.createElement("input");
+    quantityInput.type = "number";
+    quantityInput.value = 1;
+    quantityInput.min = 1;
+    quantityInput.classList.add("quantity");
+    const buyButton = document.createElement("button")
+    buyButton.classList.add("button");
+    buyButton.addEventListener("click", () => {
+      const quantity = Number(quantityInput.value);
+      window.alert(`Tillagd i varukorg: ${product.name}`);
+      addToCart(product.name, Number(product.price), quantity, product.image)
+    })
+    let badge = null;
+    if (product.badge) {
+      badge = document.createElement("span");
+      badge.classList.add("discount");
+      badge.textContent = product.badge;
+    }
+
+    name.textContent = product.name;
+    img.src = product.image;
+    img.alt = `Bild av ${product.name}`
+    price.textContent = `Pris: ${product.price.toLocaleString('sv-SE')} kr`;
+    description.textContent = product.description;
+    buyButton.textContent = "Lägg till i varukorg";
+    
+    article.appendChild(name);
+    article.appendChild(img);
+    article.appendChild(price);
+    article.appendChild(quantityInput);
+    article.appendChild(description);
+    article.appendChild(buyButton);
+
+    if(badge) {
+    article.appendChild(badge);
+    }
+
+    productList.appendChild(article);
+  });
+};
+
+getData();
+
 let cart = {};
 
 function extractPrice(text) {
@@ -12,12 +84,7 @@ function closeCartView() {
   document.querySelector("#cart-window").classList.remove("active");
 };
 
-function addToCart(button, quantity) {
-  let addItem = button.closest('.card');
-  let name = addItem.querySelector("h3").textContent;
-  let price = extractPrice(addItem.querySelector(".price").textContent);
-  let img = addItem.querySelector(".car-img").src;
-
+function addToCart(name, price, quantity, img) {
   if(cart[name]) {
     cart[name].quantity += quantity;
   } else {
@@ -109,5 +176,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document
     .querySelector('#checkout-button')
     .addEventListener('click', clearAllItems);
-
 });
